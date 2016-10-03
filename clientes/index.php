@@ -38,7 +38,7 @@
                     </div>
                     <div style="heigth:2em;"></div>
                     <div id="form-clientes">
-                        <form method="POST" action="#" id="clients-form">
+                        <form method="post" action="sendemail.php" id="clients-form">
                             <div class="form-group">
                                 <label for="name-input">Nombre</label>
                                 <input type="text" class="form-control" id="name-input" placeholder="Nombre">
