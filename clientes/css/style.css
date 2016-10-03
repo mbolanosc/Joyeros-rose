@@ -8,6 +8,8 @@
     margin: 10px 10px 10px 10.5px;
     font-family: 'Sorts Mill Goudy', serif;
     text-align: center;
+    padding: 20px 0px 20px 0px;
+
 }
 #main-desc p {
     margin: 10px 10px 10px 10.5px;
@@ -16,12 +18,16 @@
     line-height: 21px;
     color: #818181;
     text-align: center;
+    padding: 0px 0px 20px 0px;
 }
 #main-picture {
     width: 33%;
     height: 25em;
     box-shadow: 0 0 20px 3px #D3D3D3;
     margin: 0px 0px 4em 34%;
+}
+.form-control {
+    width: 70% !important;
 }
 #form-clientes {
     width: 90%;
@@ -75,7 +81,7 @@ footer a {
 /*bootstrap things*/
 
 .btn-default {
-    margin-bottom: 2em;
+    margin: 10px 0px 15px 0px;
 }
 .navbar-default {
     height: 8em;
