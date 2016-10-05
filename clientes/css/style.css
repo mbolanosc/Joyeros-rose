@@ -21,10 +21,8 @@
     padding: 0px 0px 20px 0px;
 }
 #main-picture {
-    width: 33%;
-    height: 25em;
     box-shadow: 0 0 20px 3px #D3D3D3;
-    margin: 0px 0px 4em 34%;
+    margin: 0px 0px 4em 0%;
 }
 .form-control {
     width: 70% !important;
