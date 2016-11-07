@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Clientes</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body background="http://joyerosrose.com/bundles/ezdemo/images/fondo.jpg">
+<div class="page">
+
+        <div class="navbar-wrapper">
+            <div class="navbar-content">
+                <div id="navbar-logo">
+                    <a class="navbar-brand" href="http://joyerosrose.com/">
+                        <img id="logo" alt="logo" src="http://joyerosrose.com/bundles/ezdemo/images/logo.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="container">
+            <div class="wrapper">
+                <div class="content">
+                    <div id="main-title">Clientes</div>
+                    <div id="main-desc">
+                        <p>
+                            En Rose Joyeros Escazú queremos brindarle el mejor servicio y la mejor atención, complete el siguiente formulario y así podrá obtener información de promociones y descuentos de nuestra mercadería
+                        </p>
+                    </div>
+                    <div class="main-picture">
+                        <img id="main-picture" alt="anillo" class="img-responsive"  src="img/banner-form-clientes.jpg">
+                    </div>
+                    <div style="heigth:2em;"></div>
+
+                    <div id="form-clientes" class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-md-offset-3 col-sm-offset-2">
+                            <form method="POST" action="send_form_email.php" id="clients-form">
+                            <div class="form-group">
+                                <label for="name-input">Nombre</label>
+                                <input type="text" class="form-control" pattern="[a-zA-Z0-9]+" id="name" name="name" placeholder="Nombre" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email-input">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="addres-input">Lugar de residencia</label>
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Lugar de residencia" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phonenum-input">Celular</label>
+                                <input type="tel" placeholder="8888-8888" pattern="^\d{4}-\d{4}$" maxlength="9" title="8888 (guion) 8888" class="form-control" id="phone" name="phone" placeholder="Celular" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="products-input">Productos de interés</label>
+                                <div class="checkbox">
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios1" value="Rolex" checked>
+                                        Rolex $6000 a $38000
+                                      </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios2" value="Tudor">
+                                            Tudor $3000  a $5500
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios3" value="Charriol">
+                                            Charriol $2250 a $4000
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios4" value="Anillos de compromiso" >
+                                            Anillos compromiso $700 a $2200
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios5" value="Matrimonio" >
+                                            Matrimonio $590 a $1200
+
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios6" value="Anillos de dama" >
+                                            Anillos de dama $ 650 a $5000
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios7" value="Aretes de bebe" >
+                                            Aretes de bebé $64 a $298
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios8" value="Aretes de Dama Huggies" >
+                                            Aretes de Dama Huggies $250 a $9900
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios9" value="Perlas" >
+                                            Perlas $300 a $700
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios10" value="Dijes" >
+                                            Dijes $580 a $1300
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios11" value="Juegos" >
+                                            Juegos $2300 a $7800
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios12" value="Collares" >
+                                            Collares $900 a$ 1800
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios13" value="Pulseras" >
+                                            Pulseras Aros  $350 a $ 8000
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default">Enviar</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="wrapper-footer">
+            <div class="container">
+                <div id="footer-center">
+                    <h3>CONTÁCTENOS</h3>
+                </div>
+                <div id="footer-address">
+                    <p>
+                        <strong>Multiplaza Escazú 5º Etapa </strong> / Teléfono: <strong> 2201-5440</strong> /   Lunes a Sábado de 10:00 am a 9:00 pm Domingo 10:00 am 8:00 pm
+                    </p>
+                    <p>
+                        Email: <a href="mailto:joyerose@racsa.co.cr" target="_self">joyerose@racsa.co.cr</a> &nbsp;/ Apartado: 598-1260 Escazú
+                    </p>
+                    <p>
+                        Hosting &amp; Diseño
+                        <a href="http://lionix.com" target="_self" title="Lionix">Lionix Evolve</a>
+                    </p>
+                </div>
+            </div>
+            </div>
+        </footer>
+    </div><!-- hole page-->
+
+
+</body>
+
+</html>
