@@ -6,29 +6,35 @@ $useraddress = $_POST['address'];
 $userphone = $_POST['phone'];
 $userProducts = nl2br(implode(', ', $_POST['productosDeInteres']));
 
-function validate($username, $useremail){
+function validate($username, $useremail,$useraddress,$userphone){
   $return_array=array();
   $return_array['success'] = '1';
   //email
   if($useremail == ''){
     $return_array['success'] = '0';
-    echo "Email requerido";
   }else{
     $email_exp = "/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/";
     if(!preg_match($email_exp,$useremail)) {
       $return_array['success'] = '0';
-      echo "Email invalido";
     }
   }
+  //user name
   if($username == ''){
     $return_array['success'] = '0';
-    echo "Nombre requerido";
   }else{
     $string_exp = "/^[A-Za-z .'-]+$/";
-    if (!preg_match($string_exp, $username)) {
+    if (!preg_match($string_exp, $username,$useraddress)) {
       $return_array['success'] = '0';
-      echo "Nombre invalido";
     }
+  }
+  //address
+  if($useraddress == ''){
+    $return_array['success'] = '0';
+  }
+
+  //phone Number
+  if($userphone == ''){
+    $return_array['success'] = '0';
   }
   return $return_array;
 }
@@ -48,7 +54,7 @@ function sendEmail($username,$useremail,$useraddress,$userphone,$userProducts){
   return true;
 }
 //enviar mjs
-$return_array = validate($username,$useremail);
+$return_array = validate($username,$useremail,$useraddress);
 
 if($return_array['success'] == '1'){
   sendEmail($username,$useremail,$useraddress,$userphone,$userProducts);
