@@ -20,7 +20,7 @@ function validate($username, $useremail){
       echo "Email invalido";
     }
   }
-  if(!empty($username)){
+  if($username == ''){
     $return_array['success'] = '0';
     echo "Nombre requerido";
   }else{
@@ -33,8 +33,8 @@ function validate($username, $useremail){
   return $return_array;
 }
 function sendEmail($username,$useremail,$useraddress,$userphone,$userProducts){
-  $mail = "Nombre: " . $username. "<br>"."Correo electronico: ".$useremail."<br>"."Dirección: ".$useraddress."<br>"."Telefono: ".$userphone ."<br>". "PRODUCTOS: " .$userProducts;
-  $titulo = "PRUEBA DE TITULO";
+  $mail = "Nombre: " . $username. "<br>"."Correo electronico: ".$useremail."<br>"."Direccion: ".$useraddress."<br>"."Telefono: ".$userphone ."<br>". "PRODUCTOS: " .$userProducts;
+  $titulo = "Sitio web Joyeros Rose";
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
   $headers .= "From: Joyeros Rose < mbolanosc@ucenfotec.ac.cr>\r\n";
