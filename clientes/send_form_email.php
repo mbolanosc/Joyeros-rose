@@ -39,22 +39,24 @@ function validate($username, $useremail,$useraddress,$userphone){
   return $return_array;
 }
 function sendEmail($username,$useremail,$useraddress,$userphone,$userProducts){
-  $mail = "Nombre: " . $username. "<br>"."Correo electronico: ".$useremail."<br>"."Direccion: ".$useraddress."<br>"."Telefono: ".$userphone ."<br>". "PRODUCTOS: " .$userProducts;
+  $mail = "Nombre: " . $username. "<br>"."Correo electronico: ".$useremail."<br>"."Direccion: ".$useraddress."<br>"."Telefono: ".$userphone ."<br>". "Productos: " .$userProducts;
   $titulo = "Sitio web Joyeros Rose";
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
   $headers .= "From: Joyeros Rose < mbolanosc@ucenfotec.ac.cr>\r\n";
   $bool = mail("mbolanos@lionix.org",$titulo,$mail,$headers);
   if($bool){
-      echo "Mensaje enviado";
+      //echo "Mensaje enviado";
+      header("Location: emailsend.html");
 
   }else{
-      echo "Mensaje no enviado";
+      header("Location: error.html");
+      //echo "Mensaje no enviado";
   }
   return true;
 }
 //enviar mjs
-$return_array = validate($username,$useremail,$useraddress);
+$return_array = validate($username,$useremail,$useraddress,$userphone);
 
 if($return_array['success'] == '1'){
   sendEmail($username,$useremail,$useraddress,$userphone,$userProducts);
