@@ -40,118 +40,118 @@
 
                     <div id="form-clientes" class="row">
                         <div class="col-xs-12 col-sm-12 col-md-9 col-md-offset-3 col-sm-offset-2">
-                            <form method="POST" action="#" id="clients-form">
+                            <form method="POST" action="send_form_email.php" id="clients-form">
                             <div class="form-group">
                                 <label for="name-input">Nombre</label>
-                                <input type="text" class="form-control" id="name-input" placeholder="Nombre">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="email-input">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email-input" placeholder="Correo electrónico">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="addres-input">Lugar de residencia</label>
-                                <input type="text" class="form-control" id="address-input" placeholder="Lugar de residencia">
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Lugar de residencia" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="phonenum-input">Celular</label>
-                                <input type="number" min="0" max="8" class="form-control" id="phonenum-input" placeholder="Celular">
+                                <input type="number" min="0" max="8" class="form-control" id="phone" name="phone" placeholder="Celular" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="phonenum-input">Productos de interés</label>
+                                <label for="products-input">Productos de interés</label>
                                 <div class="checkbox">
-                                    <div class="radio">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Rolex" id="optionsRadios1" value="product-Rolex" checked>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios1" value="Rolex" checked>
                                         Rolex $6000 a $38000
                                       </label>
                                     </div>
 
-                                    <div class="radio">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Tudor" id="optionsRadios2" value="product-Tudor">
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios2" value="Tudor">
                                             Tudor $3000  a $5500
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Charriol" id="optionsRadios3" value="product-Charriol" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios3" value="Charriol">
                                             Charriol $2250 a $4000
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-AnillosCompromiso" id="optionsRadios4" value="product-AnillosCompromiso" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios4" value="Anillos de compromiso" >
                                             Anillos compromiso $700 a $2200
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Matrimonio" id="optionsRadios5" value="product-Matrimonio" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios5" value="Matrimonio" >
                                             Matrimonio $590 a $1200
 
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-AnillosDama" id="optionsRadios6" value="product-AnillosDama" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios6" value="Anillos de dama" >
                                             Anillos de dama $ 650 a $5000
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-AretesBebe" id="optionsRadios7" value="product-AretesBebe" disabled>
-                                            Aretes  de bebé $64 a $298
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios7" value="Aretes de bebe" >
+                                            Aretes de bebé $64 a $298
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-AretesDamaHuggies" id="optionsRadios8" value="product-AretesDamaHuggies" disabled>
-                                            Aretes  de Dama Huggies $250 a $9900
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios8" value="Aretes de Dama Huggies" >
+                                            Aretes de Dama Huggies $250 a $9900
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Perlas" id="optionsRadios9" value="product-Perlas" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios9" value="Perlas" >
                                             Perlas $300 a $700
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Dijes" id="optionsRadios10" value="product-Dijes" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios10" value="Dijes" >
                                             Dijes $580 a $1300
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Juegos" id="optionsRadios11" value="product-Juegos" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios11" value="Juegos" >
                                             Juegos $2300 a $7800
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Collares" id="optionsRadios12" value="product-Collares" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios12" value="Collares" >
                                             Collares $900 a$ 1800
                                         </label>
                                     </div>
 
-                                    <div class="radio disabled">
+                                    <div class="checkbox">
                                         <label>
-                                        <input type="radio" name="productosDeInteres-Pulseras" id="optionsRadios13" value="product-Pulseras" disabled>
+                                        <input type="checkbox" name="productosDeInteres[]" id="optionsRadios13" value="Pulseras" >
                                             Pulseras Aros  $350 a $ 8000
                                         </label>
                                     </div>
