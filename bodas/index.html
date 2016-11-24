@@ -27,20 +27,18 @@
         <div id="container">
             <div class="wrapper">
                 <div class="content">
-                    <div id="main-title">Clientes</div>
+                    <div id="main-title">Bodas</div>
                     <div id="main-desc">
                         <p>
-                            En Rose Joyeros Escazú queremos brindarle el mejor servicio y la mejor atención, complete el siguiente formulario y así podrá obtener información de promociones y descuentos de nuestra mercadería
+                          En Rose Joyeros Escazú nos complace formar parte de este gran paso en su vida y por eso le obsequiamos un 15% de descuento en su próxima compra, al completar el siguiente formulario.
+                          <strong>(Requisito indispensable para aplicar el descuento indicar número de factura)</strong>
                         </p>
-                    </div>
-                    <div class="main-picture">
-                        <img id="main-picture" alt="anillo" class="img-responsive"  src="img/banner-form-clientes.jpg">
                     </div>
                     <div style="heigth:2em;"></div>
 
                     <div id="form-clientes" class="row">
                         <div class="col-xs-12 col-sm-12 col-md-9 col-md-offset-3 col-sm-offset-2">
-                            <form method="POST" action="send_form_email.php" id="clients-form">
+                            <form method="POST" action="send_form_email.php" id="clients-form" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="name-input">Nombre</label>
                                 <input type="text" class="form-control" pattern="[a-zA-Z0-9]+" id="name" name="name" placeholder="Nombre" required>
@@ -52,13 +50,21 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="addres-input">Lugar de residencia</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Lugar de residencia" required>
+                                <label for="phonenum-input">Celular</label>
+                                <input type="tel" placeholder="8888-8888" pattern="^\d{4}-\d{4}$" maxlength="9" title="8888 (guion) 8888" class="form-control" id="phone" name="phone" placeholder="Celular" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="phonenum-input">Celular</label>
-                                <input type="tel" placeholder="8888-8888" pattern="^\d{4}-\d{4}$" maxlength="9" title="8888 (guion) 8888" class="form-control" id="phone" name="phone" placeholder="Celular" required>
+                                <label for="facnum-input">Número de factura</label>
+                                <input type="tel" placeholder="029384758592019" maxlength="15" title="Un número de factura requiere de 15 números y sin guiones." class="form-control" id="facnum" name="facnum" placeholder="Celular" required>
+                                <small>El número de factura sin guiones.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="producto-input">Producto a cotizar</label>
+                                <input type="file" title="" class="form-control" id="fileproduct" name="fileproduct" required>
+                                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+
                             </div>
 
                             <div class="form-group">

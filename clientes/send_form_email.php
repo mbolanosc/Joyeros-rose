@@ -39,12 +39,13 @@ function validate($username, $useremail,$useraddress,$userphone){
   return $return_array;
 }
 function sendEmail($username,$useremail,$useraddress,$userphone,$userProducts){
-  $mail = "Nombre: " . $username. "<br>"."Correo electronico: ".$useremail."<br>"."Direccion: ".$useraddress."<br>"."Telefono: ".$userphone ."<br>". "Productos: " .$userProducts;
+  $mail = "Nombre: " . $username. "<br>"."Correo electronico: ".$useremail."<br>"."Direccion: ".$useraddress."<br>"."Telefono: ".$userphone ."<br>". "PRODUCTOS: " .$userProducts;
   $titulo = "Sitio web Joyeros Rose";
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
-  $headers .= "From: Joyeros Rose < mbolanosc@ucenfotec.ac.cr>\r\n";
-  $bool = mail("mbolanos@lionix.org",$titulo,$mail,$headers);
+  $headers .= "From: Joyeros Rose <info@joyerosrose.com >\r\n";
+  $bool = mail("joyerose@racsa.co.cr",$titulo,$mail,$headers);
+
   if($bool){
       //echo "Mensaje enviado";
       header("Location: emailsend.html");
